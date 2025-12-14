@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reading Timetable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    #loginBox {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+    input {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 600px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #00796b;
+      color: white;
+      font-size: 18px;
+    }
+
+    td {
+      border-bottom: 1px solid #e0f2f1;
+      font-size: 16px;
+      color: #004d40;
+    }
+
+    @media screen and (max-width: 500px) {
+      table, th, td {
+        font-size: 14px;
+        padding: 10px;
+      }
+      input {
+        width: 90%;
+      }
+    }
+
+    #timetable {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loginBox">
+  <h1>Login</h1>
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+</div>
+
+<div id="timetable">
+  <h1>My Reading Timetable</h1>
+  <table>
+    <tr><th>Day</th><th>Time</th><th>Subjects</th></tr>
+    <tr><td>Monday</td><td>4:00am - 6:00am</td><td>Civic, Biology</td></tr>
+    <tr><td>Tuesday</td><td>4:00am - 6:00am</td><td>Chemistry, English</td></tr>
+    <tr><td>Wednesday</td><td>4:00am - 6:00am</td><td>Marketing, Computer</td></tr>
+    <tr><td>Thursday</td><td>4:00am - 6:00am</td><td>Physics, Igbo</td></tr>
+    <tr><td>Friday</td><td>4:00am - 6:00am</td><td>Mathematics</td></tr>
+  </table>
+</div>
+
+<script>
+  function login() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    if(user === "NGELE JEREMIAH WEB PAGE" && pass === "1234") {
+      document.getElementById('loginBox').style.display = 'none';
+      document.getElementById('timetable').style.display = 'block';
+    } else {
+      alert("Wrong username or password!");
+    }
+  }
+</script>
+
+</body>
+</html>
